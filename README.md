@@ -2,17 +2,18 @@
 ## Data acquisition
 ### LinkedIn advertising platform
 LinkedIn advertising platform provides an entry point to determine information based on tags. Different audience sizes will be output based on different tags on the LinkedIn advertising platform. Therefore, we can determine the number of alumni in the destination based on school data and location.
-Points to note:
+- Points to note:
 1. This is self-reported data
 2. Data representativeness issues
 3. Data ethics issues
 4. Data acquisition process (api and manual)
 ### School data
-Target schools can be determined based on the university ranking list (QS)
-Country list determined based on the global development index or the destination outflow population location
+- Target schools can be determined based on the university ranking list (QS)
+- Country list determined based on the global development index or the destination outflow population location
 ### Merge data
-Merge the above two databases to obtain the final data
-The final data format is the alumni size of the school in a certain area under the school classification. (For example, the scale of alumni of the University of Hong Kong in Japan)
+Merge the above two databases to obtain the final data.
+The final data format is the alumni size of the school in a certain area under the school classification. 
+- (For example, the scale of alumni of the University of Hong Kong in Japan)
 
 ## Data analysis
 ### Descriptive data analysis
