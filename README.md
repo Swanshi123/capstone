@@ -7,7 +7,7 @@ LinkedIn advertising platform provides an entry point to determine information b
 2. Data representativeness issues
 3. Data ethics issues
 4. Data acquisition process (api and manual)
-- refer to:https://github.com/Swanshi123/MSDA8001-Linkedin.git
+- refer to:https://github.com/Swanshi123/LinkedinADFunction
 ### School data
 - Target schools can be determined based on the university ranking list (QS)
 - Country list determined based on the global development index or the destination outflow population location
