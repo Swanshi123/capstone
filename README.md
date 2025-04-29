@@ -59,6 +59,9 @@ Chord diagrams can be used for very comprehensive analysis
 ### chord diagrams
 ![region](https://github.com/user-attachments/assets/4cdbc101-27b0-440b-a976-03e9cf42f6e0)
 
+![continets](https://github.com/user-attachments/assets/958b146f-ca3c-4a48-9a81-d0c7193b712e)
+
+
 1. Summarize and analyze the data obtained above. The scale of alumni inflow from different regions and the scale of alumni of different schools themselves are obtained.
 2. Take schools and regions as points and determine the size of points according to quantity
 3. Take school to region as a line and determine the thickness of the line according to the number of floating population
@@ -68,10 +71,48 @@ Chord diagrams can be used for very comprehensive analysis
 
 
 ### Network analysis
+![image](https://github.com/user-attachments/assets/09abf1b7-1cac-4890-8f99-882622671347)
+
 1.Constructing a network graph
+- source: departure point
+- target: destination
+- count: the number of alumni flowing from the departure point to the destination
+- Construct a directed graph from the departure point to the destination
+- Calculate the in-degree and out-degree of Hong Kong and Singapore
+- Calculate the degree centrality of Hong Kong and Singapore, and give an academic explanation.
+
 2.Comparison of in-degree and out-degree
+Comparison of Hong Kong and Singapore:
+- Hong Kong - Out Degree: 35
+- Singapore - Out Degree: 43
+- Hong Kong - in Degree: 1
+- Singapore - in Degree: 1
+
 3.Comparison of weighted in-degree and out-degree
+- Hong Kong - Weighted Out Degree (Total Alumni Sent): 398260
+- Singapore - Weighted Out Degree (Total Alumni Sent): 444480
+- Hong Kong - Weighted in Degree (Total Alumni receive): 14000
+- Singapore - Weighted in Degree (Total Alumni receive): 16320
+
 4.Comparison of centrality
+- Hong Kong - Betweenness Centrality: 0.0019
+- Singapore - Betweenness Centrality: 0.0063
+
+5.Academic explanation
+5.1 Out-degree and In-degree
+In network analysis, a directed graph simulates the migration of Hong Kong and Singapore alumni to various countries, where edges represent flow directions and nodes represent countries. In-degree and out-degree provide insights into the roles of Hong Kong and Singapore in the network.
+- Hong Kong:
+1. Out-degree (35): indicates that Hong Kong is an important source of alumni, sending graduates to 35 different countries. Such a high out-degree reflects its wide international influence, with a large number of alumni flowing to the United States
+2. In-degree (1): indicates that Hong Kong only receives alumni from Singapore
+- Singapore:
+1. Out-degree (43): shows that its influence is even wider, with alumni flowing to 43 countries including Hong Kong. This exceeds Hong Kong's out-degree, indicating that alumni destinations are more diversified, with a large number of alumni flowing to the United States (236,800 people)
+2. In-degree (1): indicates that Singapore receives alumni from Hong Kong.
+
+5.2 Outdegree centrality
+- total 45
+- Outdegree centrality: Singapore’s higher outdegree (43 vs. 35) suggests that it is more active or influential in global alumni communication, which may be due to the international reputation of its universities or mobility programs. Hong Kong also shows strong outbound connectivity, although with fewer destinations.
+- Indegree centrality: Both nodes have an indegree of 1, reflecting two-way communication (Hong Kong to Singapore and vice versa), but in this dataset, only two-way flows are reflected because the data sources are limited to Hong Kong and Singapore. Two-way flows (Singapore to Hong Kong: 14,000; Hong Kong to Singapore: 16,320) highlight regional connections, which may be driven by proximity or economic ties. Singapore’s broader outbound influence may indicate that its alumni network is more global.
+
 
 
 ### Causal inference
