@@ -1,0 +1,127 @@
+<html>
+    <head>
+        <meta charset="utf-8">
+        
+            <script src="lib/bindings/utils.js"></script>
+            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/vis-network/9.1.2/dist/dist/vis-network.min.css" integrity="sha512-WgxfT5LWjfszlPHXRmBWHkV2eceiWTOBvrKCNbdgDYTHrT2AeLCGbF4sZlZw3UMN3WtL0tGUoIAKsu8mllg/XA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/vis-network/9.1.2/dist/vis-network.min.js" integrity="sha512-LnvoEWDFrqGHlHmDD2101OrLcbsfkrzoSpvtSQtxK3RMnRV0eOkhhBN2dXHKRrUU8p2DGRTk35n4O8nWSVe1mQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+            
+        
+<center>
+<h1></h1>
+</center>
+
+<!-- <link rel="stylesheet" href="../node_modules/vis/dist/vis.min.css" type="text/css" />
+<script type="text/javascript" src="../node_modules/vis/dist/vis.js"> </script>-->
+        <link
+          href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css"
+          rel="stylesheet"
+          integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6"
+          crossorigin="anonymous"
+        />
+        <script
+          src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js"
+          integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf"
+          crossorigin="anonymous"
+        ></script>
+
+
+        <center>
+          <h1></h1>
+        </center>
+        <style type="text/css">
+
+             #mynetwork {
+                 width: 100%;
+                 height: 750px;
+                 background-color: #fcfcfc;
+                 border: 1px solid lightgray;
+                 position: relative;
+                 float: left;
+             }
+
+             
+
+             
+
+             
+        </style>
+    </head>
+
+
+    <body>
+        <div class="card" style="width: 100%">
+            
+            
+            <div id="mynetwork" class="card-body"></div>
+        </div>
+
+        
+        
+
+        <script type="text/javascript">
+
+              // initialize global variables.
+              var edges;
+              var nodes;
+              var allNodes;
+              var allEdges;
+              var nodeColors;
+              var originalNodes;
+              var network;
+              var container;
+              var options, data;
+              var filter = {
+                  item : '',
+                  property : '',
+                  value : []
+              };
+
+              
+
+              
+
+              // This method is responsible for drawing the graph, returns the drawn network
+              function drawGraph() {
+                  var container = document.getElementById('mynetwork');
+
+                  
+
+                  // parsing and collecting nodes and edges from the python
+                  nodes = new vis.DataSet([{"color": "#ff6666", "id": "Hong Kong", "label": "Hong Kong", "shape": "dot", "size": 62.958315233127195}, {"color": "#cccccc", "id": "Australia", "label": "Australia", "shape": "dot", "size": 58.3589667773576}, {"color": "#cccccc", "id": "Austria", "label": "Austria", "shape": "dot", "size": 43.80972058177586}, {"color": "#cccccc", "id": "Belgium", "label": "Belgium", "shape": "dot", "size": 45.0}, {"color": "#cccccc", "id": "Brazil", "label": "Brazil", "shape": "dot", "size": 45.983866769659336}, {"color": "#cccccc", "id": "Canada", "label": "Canada", "shape": "dot", "size": 79.26507605223851}, {"color": "#cccccc", "id": "China", "label": "China", "shape": "dot", "size": 53.600518131237564}, {"color": "#cccccc", "id": "Denmark", "label": "Denmark", "shape": "dot", "size": 43.982753492378876}, {"color": "#cccccc", "id": "Finland", "label": "Finland", "shape": "dot", "size": 43.2842712474619}, {"color": "#cccccc", "id": "France", "label": "France", "shape": "dot", "size": 88.48469228349535}, {"color": "#cccccc", "id": "Germany", "label": "Germany", "shape": "dot", "size": 62.01063709417264}, {"color": "#cccccc", "id": "Greece", "label": "Greece", "shape": "dot", "size": 33.70828693386971}, {"color": "#cccccc", "id": "India", "label": "India", "shape": "dot", "size": 61.79743582719036}, {"color": "#cccccc", "id": "Indonesia", "label": "Indonesia", "shape": "dot", "size": 58.93176527297759}, {"color": "#cccccc", "id": "Ireland", "label": "Ireland", "shape": "dot", "size": 44.495762407505254}, {"color": "#cccccc", "id": "Italy", "label": "Italy", "shape": "dot", "size": 45.3315017762062}, {"color": "#cccccc", "id": "Japan", "label": "Japan", "shape": "dot", "size": 53.47076812334269}, {"color": "#cccccc", "id": "Macau", "label": "Macau", "shape": "dot", "size": 34.49358868961792}, {"color": "#cccccc", "id": "Malaysia", "label": "Malaysia", "shape": "dot", "size": 43.10693864511039}, {"color": "#cccccc", "id": "Mexico", "label": "Mexico", "shape": "dot", "size": 41.64582518894846}, {"color": "#cccccc", "id": "Netherlands", "label": "Netherlands", "shape": "dot", "size": 51.05551275463989}, {"color": "#cccccc", "id": "New Zealand", "label": "New Zealand", "shape": "dot", "size": 42.38612787525831}, {"color": "#cccccc", "id": "Norway", "label": "Norway", "shape": "dot", "size": 51.3318042491699}, {"color": "#cccccc", "id": "Philippines", "label": "Philippines", "shape": "dot", "size": 48.91164991562634}, {"color": "#cccccc", "id": "Poland", "label": "Poland", "shape": "dot", "size": 49.49637662132068}, {"color": "#cccccc", "id": "Portugal", "label": "Portugal", "shape": "dot", "size": 41.83281572999748}, {"color": "#6699ff", "id": "Singapore", "label": "Singapore", "shape": "dot", "size": 39.899799195977465}, {"color": "#cccccc", "id": "South Korea", "label": "South Korea", "shape": "dot", "size": 55.74309757492672}, {"color": "#cccccc", "id": "Spain", "label": "Spain", "shape": "dot", "size": 52.013511046643494}, {"color": "#cccccc", "id": "Sweden", "label": "Sweden", "shape": "dot", "size": 49.64101615137755}, {"color": "#cccccc", "id": "Switzerland", "label": "Switzerland", "shape": "dot", "size": 51.742346141747674}, {"color": "#cccccc", "id": "Taiwan", "label": "Taiwan", "shape": "dot", "size": 53.600518131237564}, {"color": "#cccccc", "id": "Thailand", "label": "Thailand", "shape": "dot", "size": 41.267851073127396}, {"color": "#cccccc", "id": "United Arab Emirates", "label": "United Arab Emirates", "shape": "dot", "size": 46.937438845342626}, {"color": "#cccccc", "id": "United Kingdom", "label": "United Kingdom", "shape": "dot", "size": 74.83310120660636}, {"color": "#cccccc", "id": "United States", "label": "United States", "shape": "dot", "size": 135.0}, {"color": "#cccccc", "id": "Bahamas", "label": "Bahamas", "shape": "dot", "size": 36.679483388678804}, {"color": "#cccccc", "id": "Bangladesh", "label": "Bangladesh", "shape": "dot", "size": 58.58898943540674}, {"color": "#cccccc", "id": "Cambodia", "label": "Cambodia", "shape": "dot", "size": 33.439088914585774}, {"color": "#cccccc", "id": "Colombia", "label": "Colombia", "shape": "dot", "size": 32.88854381999832}, {"color": "#cccccc", "id": "Kenya", "label": "Kenya", "shape": "dot", "size": 37.3606797749979}, {"color": "#cccccc", "id": "Myanmar", "label": "Myanmar", "shape": "dot", "size": 32.60681686165901}, {"color": "#cccccc", "id": "Nigeria", "label": "Nigeria", "shape": "dot", "size": 36.21320343559643}, {"color": "#cccccc", "id": "Pakistan", "label": "Pakistan", "shape": "dot", "size": 45.3315017762062}, {"color": "#cccccc", "id": "Saudi Arabia", "label": "Saudi Arabia", "shape": "dot", "size": 35.73644135332772}, {"color": "#cccccc", "id": "Sri Lanka", "label": "Sri Lanka", "shape": "dot", "size": 35.49390153191919}, {"color": "#cccccc", "id": "Vietnam", "label": "Vietnam", "shape": "dot", "size": 34.7484176581315}]);
+                  edges = new vis.DataSet([{"arrows": "to", "color": "#aaaaaa", "from": "Hong Kong", "to": "Australia", "value": 580}, {"arrows": "to", "color": "#aaaaaa", "from": "Hong Kong", "to": "Austria", "value": 490}, {"arrows": "to", "color": "#aaaaaa", "from": "Hong Kong", "to": "Belgium", "value": 550}, {"arrows": "to", "color": "#aaaaaa", "from": "Hong Kong", "to": "Brazil", "value": 650}, {"arrows": "to", "color": "#aaaaaa", "from": "Hong Kong", "to": "Canada", "value": 430}, {"arrows": "to", "color": "#aaaaaa", "from": "Hong Kong", "to": "China", "value": 390}, {"arrows": "to", "color": "#aaaaaa", "from": "Hong Kong", "to": "Denmark", "value": 320}, {"arrows": "to", "color": "#aaaaaa", "from": "Hong Kong", "to": "Finland", "value": 320}, {"arrows": "to", "color": "#aaaaaa", "from": "Hong Kong", "to": "France", "value": 300}, {"arrows": "to", "color": "#aaaaaa", "from": "Hong Kong", "to": "Germany", "value": 310}, {"arrows": "to", "color": "#aaaaaa", "from": "Hong Kong", "to": "Greece", "value": 350}, {"arrows": "to", "color": "#aaaaaa", "from": "Hong Kong", "to": "India", "value": 390}, {"arrows": "to", "color": "#aaaaaa", "from": "Hong Kong", "to": "Indonesia", "value": 430}, {"arrows": "to", "color": "#aaaaaa", "from": "Hong Kong", "to": "Ireland", "value": 500}, {"arrows": "to", "color": "#aaaaaa", "from": "Hong Kong", "to": "Italy", "value": 330}, {"arrows": "to", "color": "#aaaaaa", "from": "Hong Kong", "to": "Japan", "value": 550}, {"arrows": "to", "color": "#aaaaaa", "from": "Hong Kong", "to": "Macau", "value": 380}, {"arrows": "to", "color": "#aaaaaa", "from": "Hong Kong", "to": "Malaysia", "value": 310}, {"arrows": "to", "color": "#aaaaaa", "from": "Hong Kong", "to": "Mexico", "value": 410}, {"arrows": "to", "color": "#aaaaaa", "from": "Hong Kong", "to": "Netherlands", "value": 440}, {"arrows": "to", "color": "#aaaaaa", "from": "Hong Kong", "to": "New Zealand", "value": 310}, {"arrows": "to", "color": "#aaaaaa", "from": "Hong Kong", "to": "Norway", "value": 410}, {"arrows": "to", "color": "#aaaaaa", "from": "Hong Kong", "to": "Philippines", "value": 520}, {"arrows": "to", "color": "#aaaaaa", "from": "Hong Kong", "to": "Poland", "value": 700}, {"arrows": "to", "color": "#aaaaaa", "from": "Hong Kong", "to": "Portugal", "value": 720}, {"arrows": "to", "color": "#aaaaaa", "from": "Hong Kong", "to": "Singapore", "value": 620}, {"arrows": "to", "color": "#aaaaaa", "from": "Hong Kong", "to": "South Korea", "value": 1000}, {"arrows": "to", "color": "#aaaaaa", "from": "Hong Kong", "to": "Spain", "value": 540}, {"arrows": "to", "color": "#aaaaaa", "from": "Hong Kong", "to": "Sweden", "value": 300}, {"arrows": "to", "color": "#aaaaaa", "from": "Hong Kong", "to": "Switzerland", "value": 350}, {"arrows": "to", "color": "#aaaaaa", "from": "Hong Kong", "to": "Taiwan", "value": 600}, {"arrows": "to", "color": "#aaaaaa", "from": "Hong Kong", "to": "Thailand", "value": 300}, {"arrows": "to", "color": "#aaaaaa", "from": "Hong Kong", "to": "United Arab Emirates", "value": 570}, {"arrows": "to", "color": "#aaaaaa", "from": "Hong Kong", "to": "United Kingdom", "value": 480}, {"arrows": "to", "color": "#aaaaaa", "from": "Hong Kong", "to": "United States", "value": 13000}, {"arrows": "to", "color": "#aaaaaa", "from": "Singapore", "to": "Australia", "value": 1300}, {"arrows": "to", "color": "#aaaaaa", "from": "Singapore", "to": "Austria", "value": 340}, {"arrows": "to", "color": "#aaaaaa", "from": "Singapore", "to": "Bahamas", "value": 470}, {"arrows": "to", "color": "#aaaaaa", "from": "Singapore", "to": "Bangladesh", "value": 1900}, {"arrows": "to", "color": "#aaaaaa", "from": "Singapore", "to": "Belgium", "value": 350}, {"arrows": "to", "color": "#aaaaaa", "from": "Singapore", "to": "Brazil", "value": 310}, {"arrows": "to", "color": "#aaaaaa", "from": "Singapore", "to": "Cambodia", "value": 340}, {"arrows": "to", "color": "#aaaaaa", "from": "Singapore", "to": "Canada", "value": 3700}, {"arrows": "to", "color": "#aaaaaa", "from": "Singapore", "to": "China", "value": 1100}, {"arrows": "to", "color": "#aaaaaa", "from": "Singapore", "to": "Colombia", "value": 320}, {"arrows": "to", "color": "#aaaaaa", "from": "Singapore", "to": "Denmark", "value": 520}, {"arrows": "to", "color": "#aaaaaa", "from": "Singapore", "to": "Finland", "value": 480}, {"arrows": "to", "color": "#aaaaaa", "from": "Singapore", "to": "France", "value": 5100}, {"arrows": "to", "color": "#aaaaaa", "from": "Singapore", "to": "Germany", "value": 1900}, {"arrows": "to", "color": "#aaaaaa", "from": "Singapore", "to": "Hong Kong", "value": 2300}, {"arrows": "to", "color": "#aaaaaa", "from": "Singapore", "to": "India", "value": 1800}, {"arrows": "to", "color": "#aaaaaa", "from": "Singapore", "to": "Indonesia", "value": 1500}, {"arrows": "to", "color": "#aaaaaa", "from": "Singapore", "to": "Ireland", "value": 370}, {"arrows": "to", "color": "#aaaaaa", "from": "Singapore", "to": "Italy", "value": 590}, {"arrows": "to", "color": "#aaaaaa", "from": "Singapore", "to": "Japan", "value": 930}, {"arrows": "to", "color": "#aaaaaa", "from": "Singapore", "to": "Kenya", "value": 500}, {"arrows": "to", "color": "#aaaaaa", "from": "Singapore", "to": "Malaysia", "value": 480}, {"arrows": "to", "color": "#aaaaaa", "from": "Singapore", "to": "Mexico", "value": 300}, {"arrows": "to", "color": "#aaaaaa", "from": "Singapore", "to": "Myanmar", "value": 310}, {"arrows": "to", "color": "#aaaaaa", "from": "Singapore", "to": "Netherlands", "value": 860}, {"arrows": "to", "color": "#aaaaaa", "from": "Singapore", "to": "New Zealand", "value": 440}, {"arrows": "to", "color": "#aaaaaa", "from": "Singapore", "to": "Nigeria", "value": 450}, {"arrows": "to", "color": "#aaaaaa", "from": "Singapore", "to": "Norway", "value": 910}, {"arrows": "to", "color": "#aaaaaa", "from": "Singapore", "to": "Pakistan", "value": 920}, {"arrows": "to", "color": "#aaaaaa", "from": "Singapore", "to": "Philippines", "value": 630}, {"arrows": "to", "color": "#aaaaaa", "from": "Singapore", "to": "Poland", "value": 490}, {"arrows": "to", "color": "#aaaaaa", "from": "Singapore", "to": "Saudi Arabia", "value": 430}, {"arrows": "to", "color": "#aaaaaa", "from": "Singapore", "to": "South Korea", "value": 660}, {"arrows": "to", "color": "#aaaaaa", "from": "Singapore", "to": "Spain", "value": 830}, {"arrows": "to", "color": "#aaaaaa", "from": "Singapore", "to": "Sri Lanka", "value": 420}, {"arrows": "to", "color": "#aaaaaa", "from": "Singapore", "to": "Sweden", "value": 900}, {"arrows": "to", "color": "#aaaaaa", "from": "Singapore", "to": "Switzerland", "value": 1000}, {"arrows": "to", "color": "#aaaaaa", "from": "Singapore", "to": "Taiwan", "value": 890}, {"arrows": "to", "color": "#aaaaaa", "from": "Singapore", "to": "Thailand", "value": 390}, {"arrows": "to", "color": "#aaaaaa", "from": "Singapore", "to": "United Arab Emirates", "value": 450}, {"arrows": "to", "color": "#aaaaaa", "from": "Singapore", "to": "United Kingdom", "value": 3100}, {"arrows": "to", "color": "#aaaaaa", "from": "Singapore", "to": "United States", "value": 1400}, {"arrows": "to", "color": "#aaaaaa", "from": "Singapore", "to": "Vietnam", "value": 390}]);
+
+                  nodeColors = {};
+                  allNodes = nodes.get({ returnType: "Object" });
+                  for (nodeId in allNodes) {
+                    nodeColors[nodeId] = allNodes[nodeId].color;
+                  }
+                  allEdges = edges.get({ returnType: "Object" });
+                  // adding nodes and edges to the graph
+                  data = {nodes: nodes, edges: edges};
+
+                  var options = {"nodes": {"font": {"size": 16, "face": "Verdana", "color": "#333333"}, "borderWidth": 1, "shadow": true}, "edges": {"color": {"inherit": false}, "smooth": {"type": "continuous"}}, "physics": {"forceAtlas2Based": {"gravitationalConstant": -70, "centralGravity": 0.005, "springLength": 120, "springConstant": 0.08}, "minVelocity": 0.75, "solver": "forceAtlas2Based"}};
+
+                  
+
+
+                  
+
+                  network = new vis.Network(container, data, options);
+
+                  
+
+                  
+
+                  
+
+
+                  
+
+                  return network;
+
+              }
+              drawGraph();
+        </script>
+    </body>
+</html>
