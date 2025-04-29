@@ -4,7 +4,7 @@
 LinkedIn advertising platform provides an entry point to determine information based on tags. Different audience sizes will be output based on different tags on the LinkedIn advertising platform. Therefore, we can determine the number of alumni in the destination based on school data and location.
 - Points to note:
 1. This is self-reported data
-2. Data representativeness issues（capstone Latest version/1Data Validation/school_representativeness_academic.png）
+2. Data representativeness issues（[capstone Latest version/1Data Validation/school_representativeness_academic.png](https://github.com/Swanshi123/capstone/blob/main/capstone%20Latest%20version/1Data%20Validation/school_representativeness_academic.png)）
 3. Data ethics issues
 4. Data acquisition process (api and manual)
 - refer to:https://github.com/Swanshi123/LinkedinADFunction
