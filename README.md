@@ -42,6 +42,7 @@ The final data format is the alumni size of the school in a certain area under t
 ![alumni_destination_comparison](https://github.com/user-attachments/assets/46807b20-106b-4e3b-a1e0-b338d337db86)
 
 *Describe*
+
 The bar chart shows the distribution of Hong Kong and Singapore alumni in major study abroad destinations around the world, measured by their share of the total number of alumni.
 - The United States is the most popular study abroad destination for both regions, with 41.4% of Hong Kong alumni and 53.3% of Singapore alumni choosing the United States. This highlights the continued dominance of the United States as a hub for higher education and employment for graduates in East Asia.
 - ​​The United Kingdom is particularly popular with Hong Kong alumni (12.9%), more than twice the number of Singapore alumni (4.4%), reflecting the UK's colonial history with Hong Kong and familiarity with British institutions.
@@ -49,6 +50,7 @@ The bar chart shows the distribution of Hong Kong and Singapore alumni in major 
 - Hong Kong and Singapore appear in each other's top ten alumni, but in different proportions. In general, more Hong Kong alumni go to Singapore (4.1%), while fewer Singaporean alumni choose Hong Kong (3.1%)
 
 *Caption*
+
 - The bar chart reflects normalized percentages, not raw alumni numbers, so the two regions with different total alumni numbers are comparable.
 - The color scheme reflects symbolic regional characteristics (red for Hong Kong and neutral dark colors for Singapore).
 
