@@ -79,7 +79,9 @@ From the map,
 6. The contrast between the two chord diagrams lies in the division of countries into continents.
 
 
-### Network analysis(link: https://swanshi123.github.io/capstone--htmlpr/alumni_network_visualization_new2.html)
+### Network analysis(link: [https://swanshi123.github.io/capstone--htmlpr/alumni_network_visualization_new2.html](https://swanshi123.github.io/capstone--htmlpr/global_alumni_world_map_log1.html))
+
+
 ![image](https://github.com/user-attachments/assets/09abf1b7-1cac-4890-8f99-882622671347)
 
 1.Constructing a network graph
