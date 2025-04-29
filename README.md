@@ -53,7 +53,7 @@ The final data format is the alumni size of the school in a certain area under t
 ![alumni_destination_comparison](https://github.com/user-attachments/assets/46807b20-106b-4e3b-a1e0-b338d337db86)
 
 
-### World Map
+### World Map（link:https://swanshi123.github.io/capstone--htmlpr/global_alumni_world_map_log1.html）
 ![全球校友log人数（不包含港澳台）](https://github.com/user-attachments/assets/e756a4c9-afe9-49f6-ac17-ecb32f95785d)
 ![香港校友log人数(不包含港澳台）](https://github.com/user-attachments/assets/a1500be6-b5c3-4316-ac70-28a7702eda00)
 ![新加坡log校友人数（不含港澳台）](https://github.com/user-attachments/assets/e0ea365c-907e-403a-8be2-44c1710d97e1)
@@ -79,7 +79,7 @@ From the map,
 6. The contrast between the two chord diagrams lies in the division of countries into continents.
 
 
-### Network analysis
+### Network analysis()
 ![image](https://github.com/user-attachments/assets/09abf1b7-1cac-4890-8f99-882622671347)
 
 1.Constructing a network graph
