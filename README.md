@@ -54,7 +54,16 @@ The final data format is the alumni size of the school in a certain area under t
 
 
 ### World Map
-Chord diagrams can be used for very comprehensive analysis
+![全球校友log人数（不包含港澳台）](https://github.com/user-attachments/assets/e756a4c9-afe9-49f6-ac17-ecb32f95785d)
+![香港校友log人数(不包含港澳台）](https://github.com/user-attachments/assets/a1500be6-b5c3-4316-ac70-28a7702eda00)
+![新加坡log校友人数（不含港澳台）](https://github.com/user-attachments/assets/e0ea365c-907e-403a-8be2-44c1710d97e1)
+
+From the map,
+- The United States is a common destination
+- Singapore alumni are more widely distributed (in Africa), and Hong Kong alumni are distributed in fewer regions than Singapore
+- Hong Kong alumni are more closely connected to mainland China (darker colors)
+- Singapore is more closely connected to India, and Hong Kong is more closely connected to the United Kingdom
+
 
 ### chord diagrams
 ![region](https://github.com/user-attachments/assets/4cdbc101-27b0-440b-a976-03e9cf42f6e0)
