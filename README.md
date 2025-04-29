@@ -99,6 +99,7 @@ Comparison of Hong Kong and Singapore:
 - Singapore - Betweenness Centrality: 0.0063
 
 5.Academic explanation
+
 5.1 Out-degree and In-degree
 In network analysis, a directed graph simulates the migration of Hong Kong and Singapore alumni to various countries, where edges represent flow directions and nodes represent countries. In-degree and out-degree provide insights into the roles of Hong Kong and Singapore in the network.
 - Hong Kong:
