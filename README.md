@@ -53,7 +53,8 @@ The bar chart shows the distribution of Hong Kong and Singapore alumni in major 
 - The color scheme reflects symbolic regional characteristics (red for Hong Kong and neutral dark colors for Singapore).
 
 
-### World Map（link:）
+### World Map
+（link:https://swanshi123.github.io/capstone--htmlpr/global_alumni_world_map_log1.html）
 ![全球校友log人数（不包含港澳台）](https://github.com/user-attachments/assets/e756a4c9-afe9-49f6-ac17-ecb32f95785d)
 ![香港校友log人数(不包含港澳台）](https://github.com/user-attachments/assets/a1500be6-b5c3-4316-ac70-28a7702eda00)
 ![新加坡log校友人数（不含港澳台）](https://github.com/user-attachments/assets/e0ea365c-907e-403a-8be2-44c1710d97e1)
