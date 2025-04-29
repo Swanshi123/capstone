@@ -10,15 +10,16 @@ LinkedIn advertising platform provides an entry point to determine information b
 
 ![school_representativeness_academic](https://github.com/user-attachments/assets/53defbe0-8f44-46d0-96da-db24e803dd4b)
 
+*Describe*
 The bar chart shows the distribution of Hong Kong and Singapore alumni in major study abroad destinations around the world, measured by their share of the total number of alumni.
-• The United States is the most popular study abroad destination for both regions, with 41.4% of Hong Kong alumni and 53.3% of Singapore alumni choosing the United States. This highlights the continued dominance of the United States as a hub for higher education and employment for graduates in East Asia.
-• ​​The United Kingdom is particularly popular with Hong Kong alumni (12.9%), more than twice the number of Singapore alumni (4.4%), reflecting the UK's colonial history with Hong Kong and familiarity with British institutions.
-• Mainland China: Hong Kong alumni account for 8.7% of the total, while Singapore alumni account for 2.8%, indicating a higher dependence between Hong Kong and mainland China. (Taught postgraduates return to mainland employment)
-• Hong Kong and Singapore appear in each other's top ten alumni, but in different proportions. In general, more Hong Kong alumni go to Singapore (4.1%), while fewer Singaporean alumni choose Hong Kong (3.1%)
+- The United States is the most popular study abroad destination for both regions, with 41.4% of Hong Kong alumni and 53.3% of Singapore alumni choosing the United States. This highlights the continued dominance of the United States as a hub for higher education and employment for graduates in East Asia.
+- ​​The United Kingdom is particularly popular with Hong Kong alumni (12.9%), more than twice the number of Singapore alumni (4.4%), reflecting the UK's colonial history with Hong Kong and familiarity with British institutions.
+- Mainland China: Hong Kong alumni account for 8.7% of the total, while Singapore alumni account for 2.8%, indicating a higher dependence between Hong Kong and mainland China. (Taught postgraduates return to mainland employment)
+- Hong Kong and Singapore appear in each other's top ten alumni, but in different proportions. In general, more Hong Kong alumni go to Singapore (4.1%), while fewer Singaporean alumni choose Hong Kong (3.1%)
 
-Caption
-• The bar chart reflects normalized percentages, not raw alumni numbers, so the two regions with different total alumni numbers are comparable.
-• The color scheme reflects symbolic regional characteristics (red for Hong Kong and neutral dark colors for Singapore).
+*Caption*
+- The bar chart reflects normalized percentages, not raw alumni numbers, so the two regions with different total alumni numbers are comparable.
+- The color scheme reflects symbolic regional characteristics (red for Hong Kong and neutral dark colors for Singapore).
 
 4. Data ethics issues（Please cite relevant literature）
 5. Data acquisition process (api and manual)
@@ -56,6 +57,8 @@ The final data format is the alumni size of the school in a certain area under t
 Chord diagrams can be used for very comprehensive analysis
 
 ### chord diagrams
+![region](https://github.com/user-attachments/assets/4cdbc101-27b0-440b-a976-03e9cf42f6e0)
+
 1. Summarize and analyze the data obtained above. The scale of alumni inflow from different regions and the scale of alumni of different schools themselves are obtained.
 2. Take schools and regions as points and determine the size of points according to quantity
 3. Take school to region as a line and determine the thickness of the line according to the number of floating population
