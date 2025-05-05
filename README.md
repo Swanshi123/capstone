@@ -31,9 +31,14 @@ The final data format is the alumni size of the school in a certain area under t
 ## Data analysis
 
 ### Descriptive data analysis
-1. Pie Chart(if need)
-- The proportion of alumni inflow from different regions can be analyzed through pie charts
-- （Total number of Hong Kong alumni vs. Total number of Singapore alumni）
+1. Scatter plot
+![compare](https://github.com/user-attachments/assets/3cba17ac-f9a7-4034-b6c6-5361f5b49796)
+![compare(without the United States)](https://github.com/user-attachments/assets/40e9d741-80a0-4332-ab99-1b853b448162)
+
+- Scatter plot can be used to analyze the proportion of alumni inflow in different regions
+- Hong Kong alumni ratio vs. Singapore alumni ratio, calculate the proportion of overseas alumni in each station (compare the ratio rather than the absolute number)
+- Remove the extreme value of the United States (clearer)
+- Group the destinations (such as other Asian regions, other European regions, and ASEAN countries to merge the minimum value regions for easy reading) (can be modified later)
 2. Bar charts
 - can be used for comparative analysis to analyze the scale of inflow from different regions
 - For the target countries, we can answer questions about the destinations with the most alumni inflows. 
