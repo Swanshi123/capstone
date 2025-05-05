@@ -31,10 +31,10 @@ The final data format is the alumni size of the school in a certain area under t
 ## Data analysis
 
 ### Descriptive data analysis
-1. Pie Chart
+1. Pie Chart(if need)
 - The proportion of alumni inflow from different regions can be analyzed through pie charts
 - （Total number of Hong Kong alumni vs. Total number of Singapore alumni）
-2.Bar charts
+2. Bar charts
 - can be used for comparative analysis to analyze the scale of inflow from different regions
 - For the target countries, we can answer questions about the destinations with the most alumni inflows. 
 - For the flow process, we can answer descriptive and comparative analysis of the flow patterns of alumni in the two places.
@@ -69,10 +69,8 @@ From the map,
 
 
 ### chord diagrams
-![region](https://github.com/user-attachments/assets/4cdbc101-27b0-440b-a976-03e9cf42f6e0)
-
-![continets](https://github.com/user-attachments/assets/958b146f-ca3c-4a48-9a81-d0c7193b712e)
-
+![finalhk](https://github.com/user-attachments/assets/4969ab5c-2163-4de0-bbeb-a9018a63ae02)
+![SPG](https://github.com/user-attachments/assets/01e5e885-beab-45b9-b6ce-7ad13a934817)
 
 1. Summarize and analyze the data obtained above. The scale of alumni inflow from different regions and the scale of alumni of different schools themselves are obtained.
 2. Take schools and regions as points and determine the size of points according to quantity
@@ -131,7 +129,7 @@ In network analysis, a directed graph simulates the migration of Hong Kong and S
 
 
 
-### Causal inference
+### Regression Model
 We are currently preparing to use the gravity model to explore the relationship between school characteristics and the population size of the destination.
 For example:
 - Size of the university
